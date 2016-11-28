@@ -26,11 +26,11 @@ app.use(session({
 
 var db = pgp(process.env.DATABASE_URL) || pgp('postgres://student_02@localhost:5432/SecondPro_db');
 
-// app.get('/', function(req, res) {
+app.get('/', function(req, res) {
 
-// res.render('index');
+res.render('index');
 
-// });
+});
 
 var port = process.env.PORT || 3000;
 
