@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header id="header">
+ <h1 id="logo" class="rel">My Logo</h1>
+ {{#logged_in}}
+       <div id="in" class="rel">
+        <p id="hello" class="rel">Hello, {{name}}</p>
+        <nav id="list" class="rel"> <a href="/mylist">My List</a></nav>
+        <nav id="list" class="rel">
+        <form action="/logout" method="post" class="rel">
+          <button type="submit">Logout</button>
+        </form> </nav>
+    </div>
+{{/logged_in}}
+{{^logged_in}}
+    <div id="out" class="rel">
+        <form action="/login" class="rel">
+          <button class="rel" type="submit">Login</button>
+        </form>
+
+        <form action="/signup" class="rel">
+          <button class="rel" type="submit">Sign Up</button>
+        </form>
+    </div>
+    {{/logged_in}}
+</header>
+ <div id="containerSignin">
+<div id="inContainer">
+<form action="/login" method="post">
+    <span>E-mail:</span>
+  <input type="email" name="email" placeholder="Your Email" class="input"><br>
+<span>Password:</span>
+  <input type="password" name="password" placeholder="Your Password" class="input"><br>
+<p id="member">Not a member? <a href="/signup">SIgn Up</a></p> <button type="submit" class="bSign">Login</button><br>
+</form>
+</div>
+    </div>
+
+
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="./script.js"></script>
+
+</body>
+</html>

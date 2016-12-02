@@ -1,20 +1,22 @@
-DROP TABLE if EXISTS users;
-DROP TABLE if EXISTS movies;
+DROP TABLE if EXISTS users CASCADE;
+DROP TABLE if EXISTS movies CASCADE;
 
 
 CREATE TABLE users(
 id SERIAL PRIMARY KEY,
 Fname VARCHAR(20),
 Lname VARCHAR(20),
+Gender VARCHAR(5),
 Email VARCHAR(60),
-Password VARCHAR(60)
+Password VARCHAR(80)
 );
 
 CREATE TABLE movies(
 id SERIAL PRIMARY KEY,
 name VARCHAR(50),
-released_date VARCHAR(50),
-length INTEGER,
-budget INTEGER,
+image VARCHAR(400),
+-- released_date VARCHAR(50),
+-- length INTEGER,
+-- budget INTEGER,
 user_id INTEGER REFERENCES users(id)
 );

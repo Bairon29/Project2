@@ -4,13 +4,51 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title></title>
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<h1>loaded</h1>
+<header id="header">
+ <h1 id="logo" class="rel">My Logo</h1>
 
-<script type="text/javascript" src="./jquery.js"></script>
+    <div id="in" class="rel">
+        <p id="hello" class="rel">Hello, {{fname}}</p>
+        <nav id="list" class="rel">
+        <form action="/userlogin/?_method=PUT" method="post" class="rel">
+          <button type="submit">Profile</button>
+        </form> </nav>
+        <nav id="list" class="rel">
+        <form action="/logout" method="post" class="rel">
+          <button type="submit">Logout</button>
+        </form> </nav>
+    </div>
 
-  <!-- <script type="text/javascript" src="./script.js"></script> -->
+
+   <!--  <div id="container">
+      {{#movies}}
+      <div id="movies">
+        <p>Name: {{name}}</p>
+      </div>
+      {{/movies}}
+
+    </div> -->
+</header>
+ <div id="container">
+
+
+
+    </div>
+
+
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="./config.js"></script>
+  <script type="text/javascript" src="./script.js"></script>
+
 </body>
 </html>

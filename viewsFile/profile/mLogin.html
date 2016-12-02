@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header id="header">
+ <h1 id="logo" class="rel">My Logo{{gender}}</h1>
+
+    <div id="in" class="rel">
+        <p id="hello" class="rel">Hello, {{fname}}</p>
+        <nav id="list" class="rel"> <a href="/">Home</a></nav>
+        <nav id="list" class="rel"> <a href="/mylistp">My List</a></nav>
+        <nav id="list" class="rel">
+        <form action="/logout" method="post" class="rel">
+          <button type="submit">Logout</button>
+        </form> </nav>
+    </div>
+</header>
+ <div id="userlog">
+
+
+
+<div id="inContainer">
+<form action="/update" method="post">
+    <span>First Name:</span>
+    <input type="text" name="fname" value="{{fname}}" placeholder="First Name" class="input"><br>
+    <span>Last Name:</span>
+    <input type="text" name="lname" value="{{lname}}" placeholder="Last Name" class="input"><br>
+<span>Gender:</span>
+<input type="text" name="gender" value="{{gender}}"  class="input"><br>
+    <span>E-mail:</span>
+    <input type="email" name="email" value="{{email}}" placeholder="Your Email" class="input"><br>
+    <span>Password:</span>
+    <input type="password" name="password" placeholder="Your Password" class="input"><br>
+  <button type="submit" class="bSign">Save</button><br>
+</form>
+<form action="/deactive/{{id}}?_method=DELETE" method="post">
+  <button type="submit">Deactivate</button>
+</form>
+</div>
+
+    </div>
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="./script.js"></script>
+
+</body>
+</html>
